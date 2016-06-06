@@ -1,8 +1,8 @@
-$('section#about').hide();
-$('.nav').on('click'/*delegates the click to the link element*/, function(e) {
+$('section#about, section#experience, section#projects').hide();
+$('.nav').on('click', function(e) {
   e.preventDefault();
   console.log($(this).data('index'));
-  $('section#employment').hide();
   var $whereToGo = $(this).data('index');
+  $('section#' + $whereToGo).siblings().hide();
   $('section#' + $whereToGo).show();
 });

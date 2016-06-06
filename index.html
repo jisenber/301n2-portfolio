@@ -5,6 +5,7 @@
     <title>Jacob Isenberg's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" href="styles/octicons/octicons.css">
     <link rel="stylesheet" href="styles/portfolio-styles.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   </head>
@@ -13,21 +14,28 @@
     <hr></hr>
     <nav>
       <ul id = "navBar">
-        <li class = "nav"><a href= "a">home</a></li>
-        <li class = "nav" data-index="about"><a href= "a">about</a></li>
-        <li class = "nav"><a href= "a">experience</a></li>
-        <li class = "nav"><a href= "a">projects</a></li>
+        <li class = "nav" data-index="home"><a href= "a"><span class ="octicon octicon-home"></span> home</a></li>
+        <li class = "nav" data-index="about"><a href= "a"><span class = "octicon octicon-mortar-board"></span> about</a></li>
+        <li class = "nav" data-index="experience"><a href= "a"><span class ="octicon octicon-watch"></span> experience</a></li>
+        <li class = "nav" data-index="projects"><a href= "a"><span class ="octicon octicon-paintcan"></span> projects</a></li>
       </ul>
     </nav>
     <section id = "profiles">
       <h4><a href ="https://www.facebook.com/jacob.isenberg.7">Jacob's Facebook</a></h4>
       <h4><a href ="https://github.com/jisenber">Jacob's Github</a></h4>
     </section>
+    <div id = "tabContainer">
+    <section id = "home">
+      <img src = "images/jacob_picture.png" class = "headshot">
+    </section>
     <section id = "about">
       <h2><p>Section Under construction</p></h2><br>
         <img src = "images/construction.png">
     </section>
-    <section id = "employment"> <br />
+    <section id = "projects">
+      <p><h4>This is also a work in progress</p></h4>
+    </section>
+    <section id = "experience"> <br />
       <h2 id = "employmentHeader">Work Experience</h2>
       <div id = "jobList">
           <div class="template" data-category="cat">
@@ -40,6 +48,7 @@
               </ul>
           </div>
       </div>
+    </div>
     </body>
     <footer>
       <script src="scripts/jobData.js"></script>
