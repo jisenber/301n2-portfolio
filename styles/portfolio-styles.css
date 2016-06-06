@@ -12,34 +12,63 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-ul{
+ul.jobDetails {
   list-style-position: inside;
   list-style-type: circle;
-  padding-bottom: 5px
+  padding-bottom: 1%;
+  text-align: left;
 }
 
-li {
-  padding: 1px
+.headshot {
+  width: 25%;
+  margin: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+li.nav {
+    display: inline;
+    list-style: none;
+}
+a:link,a:visited {
+    display:inline-block;
+    margin-right: -4px;
+    width:15%;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color:#990033;
+    text-align:center;
+    padding:0.2%;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+a:hover,a:active
+{
+    background-color:#802000
 }
 
 h1 {
   font-size: 50px;
-  padding: 4px
+  padding: 1%
 }
 
 h2 {
   font-size: 40px;
-  padding: 2px
+  padding: 1%
 }
 
 h3 {
   font-size: 25px;
-  padding: 2px
+  padding: 1%
 
 }
 
 h4 {
   font-size: 18px;
-  padding: 2px
+  padding: 1%
 
 }
