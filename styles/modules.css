@@ -1,0 +1,73 @@
+
+a:link,a:visited {
+    display: block;
+    margin-right: 1em;
+    max-width: 100%;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color:#990033;
+    text-align:center;
+    padding: 0.5em;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+
+a:hover,a:active {
+    background-color:#802000
+}
+
+li.nav {
+    list-style: none;
+    display: none;
+}
+
+#navBar {
+  float: right;
+  position: relative;
+  background-color: #990033;
+}
+
+#navMenu {
+  float: right;
+  font-size: 3em;
+}
+
+ul.jobDetails {
+  list-style-position: inside;
+  list-style-type: circle;
+  padding-bottom: 1%;
+  text-align: left;
+}
+
+.template {
+  display: none
+}
+
+.headshot {
+  border-radius: 30%;
+  width: 20%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1300px) {
+  ul #navBar {
+    list-style-type: none;
+    margin: 1em;
+    padding: 1em;
+    overflow: hidden;
+    background-color: #990033;
+  }
+
+  #navMenu {
+    display: none;
+  }
+
+  li.nav {
+    display: inline-block;
+    text-align: center;
+    padding: 0.2em;
+    text-decoration: none;
+  }
+}

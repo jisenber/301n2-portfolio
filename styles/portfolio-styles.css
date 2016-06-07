@@ -2,26 +2,10 @@ html {
   background-color: #EBCEAC;
 }
 
-.template {
-  display: none
-}
-
 body {
   width: 80%;
   margin: auto;
   font-family: 'Montserrat', sans-serif;
-}
-
-ul.jobDetails {
-  list-style-position: inside;
-  list-style-type: circle;
-  padding-bottom: 1%;
-  text-align: left;
-}
-
-.headshot {
-  width: 25%;
-  margin: auto;
 }
 
 ul {
@@ -29,26 +13,12 @@ ul {
     padding: 0;
     text-align: center
 }
-li.nav {
-    display: inline;
-    list-style: none;
-}
-a:link,a:visited {
-    display:inline-block;
-    margin-right: -4px;
-    width:15%;
-    font-weight:bold;
-    color:#FFFFFF;
-    background-color:#990033;
-    text-align:center;
-    padding:0.2%;
-    text-decoration:none;
-    text-transform:uppercase;
-}
 
-a:hover,a:active
-{
-    background-color:#802000
+img {
+  border-radius: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 h1 {
@@ -64,11 +34,14 @@ h2 {
 h3 {
   font-size: 25px;
   padding: 1%
-
 }
 
 h4 {
   font-size: 18px;
-  padding: 1%
+  padding-bottom: 1em;
+  width: 25%;
+}
 
+h4 a {
+  width: 100%;
 }

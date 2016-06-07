@@ -6,3 +6,8 @@ $('.nav').on('click', function(e) {
   $('section#' + $whereToGo).siblings().hide();
   $('section#' + $whereToGo).show();
 });
+
+$('#navMenu').on('click', function() {
+  $('li.nav').fadeIn(400);
+  $(this).hide();
+});
