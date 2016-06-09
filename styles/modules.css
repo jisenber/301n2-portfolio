@@ -17,20 +17,25 @@ a:hover,a:active {
     background-color:#802000
 }
 
-li.nav {
-    list-style: none;
-    display: none;
+section#home{
+  width: 80%;
 }
 
-#navBar {
-  float: right;
-  position: relative;
-  background-color: #990033;
+nav li {
+    list-style: none;
+    display: none;
 }
 
 #navMenu {
   float: right;
   font-size: 3em;
+}
+
+#navMenu:hover + ul li {
+  display: block;
+  width: auto;
+  padding: 1%;
+  margin-left: 50%;
 }
 
 ul.jobDetails {
@@ -47,17 +52,21 @@ ul.jobDetails {
 .headshot {
   border-radius: 30%;
   width: 20%;
-  margin-left: auto;
-  margin-right:auto;
+  float: left;
+  clear: left;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1300px) {
+@media only screen and (min-width: 640px) {
   ul #navBar {
-    list-style-type: none;
-    margin: 1em;
     padding: 1em;
-    overflow: hidden;
     background-color: #990033;
+    width: 100%;
+  }
+
+  nav ul {
+    float: right;
+    background-color: #990033;
+    max-width: 100%;
   }
 
   #navMenu {
@@ -69,5 +78,6 @@ ul.jobDetails {
     text-align: center;
     padding: 0.2em;
     text-decoration: none;
+    max-width: 100%
   }
 }
