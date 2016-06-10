@@ -1,13 +1,16 @@
 $('section#about, section#experience, section#projects').hide();
 $('.nav').on('click', function(e) {
   e.preventDefault();
-  console.log($(this).data('index'));
+  $('section').not(this).hide();
   var $whereToGo = $(this).data('index');
-  $('section#' + $whereToGo).siblings().hide();
   $('section#' + $whereToGo).show();
 });
 
+('#facebook', '#github').off();
+
+/*
 $('#navMenu').on('click', function() {
   $('li.nav').fadeIn(400);
   $(this).hide();
 });
+*/

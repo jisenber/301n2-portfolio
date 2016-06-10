@@ -1,4 +1,4 @@
-var jobData = [
+jobData = [
   {
     position:    'Project Coordinator',
     institution: 'Fred Hutchinson Cancer Research Center',

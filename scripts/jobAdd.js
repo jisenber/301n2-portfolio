@@ -1,7 +1,6 @@
 var employments = [];
 
 function employment (job) {
-
   this.position = job.position;
   this.institution = job.institution;
   this.boss = job.boss;
@@ -10,18 +9,10 @@ function employment (job) {
 }
 
 employment.prototype.toHtml = function() {
-  var $newJob = $('div.template').clone();
-
-  $newJob.find('.position').html('<b>Position:</b> ' + this.position);
-  $newJob.find('.institution').html('<b>Institution:</b> ' + this.institution);
-  $newJob.find('.boss').html('<b>Boss:</b> ' + this.boss);
-  $newJob.find('.website').html('<b>Website:</b> ' + this.website);
-  $newJob.find('.role').html('<b>Role:</b> ' + this.role);
-
-  $newJob.append('<hr>');
-
-  $newJob.removeClass('template');
-  return $newJob;
+  var source = $('#jobAddScript').html();  //template script grabbed
+  var jobTemplate = Handlebars.compile(source); // template is compiled
+  var compiledJobs = jobTemplate(this);
+  return compiledJobs;
 };
 
 jobData.forEach(function(ele) {
