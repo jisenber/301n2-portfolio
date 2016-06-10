@@ -7,9 +7,11 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel = "stylesheet" href="styles/octicons/octicons.css">
-    <link rel="stylesheet" href="styles/portfolio-styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   </head>
   <body>
     <h1 class = "headline"> Welcome to Jacob Isenberg's Portfolio </h1>
@@ -21,11 +23,10 @@
         <li class = "nav" data-index="about"><a href= "a"><span class = "octicon octicon-mortar-board"></span> about</a></li>
         <li class = "nav" data-index="experience"><a href= "a"><span class ="octicon octicon-watch"></span> experience</a></li>
         <li class = "nav" data-index="projects"><a href= "a"><span class ="octicon octicon-paintcan"></span> projects</a></li>
-        <li class = "nav" data-index="facebook"><a href= "https://www.facebook.com/jacob.isenberg.7">Facebook</a></li>
-        <li class = "nav" data-index="github"><a href="https://github.com/jisenber">Github</a></li>
+        <li class = "link" data-index="facebook"><a href= "https://www.facebook.com/jacob.isenberg.7">Facebook</a></li>
+        <li class = "link" data-index="github"><a href="https://github.com/jisenber">Github</a></li>
       </ul>
     </nav>
-    <div id = "tabContainer">
       <section id = "home">
         <img src = "images/jacob_picture.png" class = "headshot">
       </section>
@@ -36,20 +37,20 @@
     <section id = "projects">
       <p><h4>This is also a work in progress</p></h4>
     </section>
-    <section id = "experience"> <br />
-      <h2 id = "employmentHeader">Work Experience</h2>
-      <div id = "jobList">
-          <div class="template" data-category="cat">
-              <ul class = "jobDetails">
-                <li class = "position">position</li>
-                <li class = "institution">institution</li>
-                <li class = "boss">boss</li>
-                <li class = "website"><a href="">website</a></li>
-                <li class = "role">role</li>
-              </ul>
+    <section id = "experience">
+      <h2>Work Experience</h2><br>
+      <script id="jobAddScript" type="text/x-handlebars-template">
+              <ul>
+                <li><b>Position:</b> {{position}}</li>
+                <li><b>Institution:</b>  {{institution}}</li>
+                <li></b>Boss:</b>  {{boss}}</li>
+                <li><b>Website:</b>  {{website}} </li>
+                <li><b>role:</b>  {{role}} </li>
+                <br>
+              </script>
+              <div id = "jobList">
           </div>
-      </div>
-    </div>
+        </section>
     </body>
     <footer>
       <script src="scripts/jobData.js"></script>

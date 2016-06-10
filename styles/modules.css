@@ -2,82 +2,16 @@
 a:link,a:visited {
     display: block;
     margin-right: 1em;
-    max-width: 100%;
     font-weight:bold;
+    text-decoration: none;
     color:#FFFFFF;
     background-color:#990033;
     text-align:center;
     padding: 0.5em;
-    text-decoration:none;
     text-transform:uppercase;
 }
 
 
 a:hover,a:active {
     background-color:#802000
-}
-
-section#home{
-  width: 80%;
-}
-
-nav li {
-    list-style: none;
-    display: none;
-}
-
-#navMenu {
-  float: right;
-  font-size: 3em;
-}
-
-#navMenu:hover + ul li {
-  display: block;
-  width: auto;
-  padding: 1%;
-  margin-left: 50%;
-}
-
-ul.jobDetails {
-  list-style-position: inside;
-  list-style-type: circle;
-  padding-bottom: 1%;
-  text-align: left;
-}
-
-.template {
-  display: none
-}
-
-.headshot {
-  border-radius: 30%;
-  width: 20%;
-  float: left;
-  clear: left;
-}
-
-@media only screen and (min-width: 640px) {
-  ul #navBar {
-    padding: 1em;
-    background-color: #990033;
-    width: 100%;
-  }
-
-  nav ul {
-    float: right;
-    background-color: #990033;
-    max-width: 100%;
-  }
-
-  #navMenu {
-    display: none;
-  }
-
-  li.nav {
-    display: inline-block;
-    text-align: center;
-    padding: 0.2em;
-    text-decoration: none;
-    max-width: 100%
-  }
 }

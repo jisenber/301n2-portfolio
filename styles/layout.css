@@ -1,0 +1,67 @@
+
+section#home{
+  width: 80%;
+}
+
+nav li {
+    list-style: none;
+    display: none;
+}
+
+#navMenu {
+  float: right;
+  font-size: 3em;
+}
+
+#navMenu:hover + ul li {
+  display: block;
+  width: auto;
+  padding: 1%;
+  margin-left: 50%;
+}
+
+.template {
+  display: none
+}
+
+.headshot {
+  border-radius: 30%;
+  width: 20%;
+  float: left;
+  clear: left;
+}
+
+@media only screen and (min-width: 640px) {
+  ul #navBar {
+    padding: 1em;
+    background-color: #990033;
+    width: 100%;
+  }
+
+  nav ul {
+    float: right;
+    background-color: #990033;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #navMenu {
+    display: none;
+  }
+
+  .nav{
+    display: inline;
+    text-align: center;
+    padding: 0.2em;
+    text-decoration: none;
+    max-width: 100%;
+  }
+    .link {
+      display: inline;
+      text-align: center;
+      padding: 0.2em;
+      text-decoration: none;
+      max-width: 100%;
+
+  }
+}
