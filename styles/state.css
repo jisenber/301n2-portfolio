@@ -1,0 +1,17 @@
+
+a:link,a:visited {
+    display: block;
+    margin-right: 1em;
+    font-weight:bold;
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color:#990033;
+    text-align:center;
+    padding: 0.5em;
+    text-transform:uppercase;
+}
+
+
+a:hover,a:active {
+    background-color:#802000
+}
