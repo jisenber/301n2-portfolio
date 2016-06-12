@@ -1,17 +1,11 @@
-
-a:link,a:visited {
-    display: block;
-    margin-right: 1em;
-    font-weight:bold;
-    text-decoration: none;
-    color:#FFFFFF;
-    background-color:#990033;
-    text-align:center;
-    padding: 0.5em;
-    text-transform:uppercase;
+#menuIcon {
+  float: right;
+  font-size: 3em;
 }
 
-
-a:hover,a:active {
-    background-color:#802000
+.headshot {
+  border-radius: 30%;
+  width: 20%;
+  float: left;
+  clear: left;
 }
