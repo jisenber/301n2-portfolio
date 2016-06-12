@@ -5,6 +5,20 @@ $('.nav').on('click', function(e) {
   var $whereToGo = $(this).data('index');
   $('section#' + $whereToGo).show();
 });
+
+
+$('#menuIcon').on('click', function() {
+  $('#navBar').toggle();
+});
+
+$(window).resize(function() {
+  if (window.innerWidth > 640) {
+    $('#navBar').show();
+  } else {
+    $('#navBar').hide();
+  };
+});
+
 /*
 $("#menuIcon").on('mouseenter', function() {
   $('nav li').addClass("showNav");
@@ -18,21 +32,19 @@ $("#menuIcon, nav").on('mouseleave', function() {
 
 });
 */
-if (window.innerWidth < 640) {
-    $('nav li').hide();
-    $('.navContainer').on('mouseenter', function () {
-      $('nav li').show();
-    });
-    $('.navContainer').on('mouseleave', function () {
-      $('nav li').hide();
-    });
-  };
 
-$('window').resize(function() {
-  if (window.innerWidth > 640) {
-    $('nav li').show();
-  };
-});
+
+// if (window.innerWidth < 640) {
+//     $('nav li').hide();
+//     $('.navContainer').on('mouseenter', function () {
+//       $('nav li').show();
+//     });
+//     $('.navContainer').on('mouseleave', function () {
+//       $('nav li').hide();
+//     });
+//   };
+
+
 
 /*
 $('nav').hover(function() {
