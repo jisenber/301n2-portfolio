@@ -8,12 +8,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
 img {
   border-radius: 30%;
   width: 30%;
@@ -41,8 +35,4 @@ h4 {
   font-size: 1em;
   padding-bottom: 1em;
   width: 25%;
-}
-
-h4 a {
-  width: 100%;
 }

@@ -16,8 +16,9 @@
   <body>
     <h1 class = "headline"> Welcome to Jacob Isenberg's Portfolio </h1>
     <hr></hr>
+    <div class = "navContainer">
     <nav>
-      <span class = "octicon octicon-list-unordered" id = "navMenu"></span>
+      <span class = "octicon octicon-list-unordered" id = "menuIcon"></span>
       <ul id = "navBar">
         <li class = "nav" data-index="home"><a href= "a"><span class ="octicon octicon-home"></span> home</a></li>
         <li class = "nav" data-index="about"><a href= "a"><span class = "octicon octicon-mortar-board"></span> about</a></li>
@@ -27,6 +28,7 @@
         <li class = "link" data-index="github"><a href="https://github.com/jisenber">Github</a></li>
       </ul>
     </nav>
+  </div>
       <section id = "home">
         <img src = "images/jacob_picture.png" class = "headshot">
       </section>
@@ -41,11 +43,11 @@
       <h2>Work Experience</h2><br>
       <script id="jobAddScript" type="text/x-handlebars-template">
               <ul>
-                <li><b>Position:</b> {{position}}</li>
-                <li><b>Institution:</b>  {{institution}}</li>
-                <li></b>Boss:</b>  {{boss}}</li>
-                <li><b>Website:</b>  {{website}} </li>
-                <li><b>role:</b>  {{role}} </li>
+                <li><b>Position:</b> <span class = "indent">{{position}}</span> </span></li>
+                <li><b>Institution:</b> <span class = "indent">{{institution}}</span></li>
+                <li></b>Boss:</b> <span class = "indent">{{boss}}</span></li>
+                <li><b>Website:</b> <span class = "indent">{{website}}</span> </li>
+                <li><b>role:</b> <span class = "indent">{{role}}</span> </li>
                 <br>
               </script>
               <div id = "jobList">
