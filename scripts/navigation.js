@@ -5,12 +5,37 @@ $('.nav').on('click', function(e) {
   var $whereToGo = $(this).data('index');
   $('section#' + $whereToGo).show();
 });
+/*
+$("#menuIcon").on('mouseenter', function() {
+  $('nav li').addClass("showNav");
+  $('nav li').removeClass("hideNav");
 
-('#facebook', '#github').off();
+});
+
+$("#menuIcon, nav").on('mouseleave', function() {
+  $('nav li').addClass("hideNav");
+  $('nav li').removeClass("showNav");
+
+});
+*/
+if (window.innerWidth < 640) {
+    $('nav li').hide();
+    $('.navContainer').on('mouseenter', function () {
+      $('nav li').show();
+    });
+    $('.navContainer').on('mouseleave', function () {
+      $('nav li').hide();
+    });
+  };
+
+$('window').resize(function() {
+  if (window.innerWidth > 640) {
+    $('nav li').show();
+  };
+});
 
 /*
-$('#navMenu').on('click', function() {
-  $('li.nav').fadeIn(400);
-  $(this).hide();
+$('nav').hover(function() {
+  $('nav li').toggle();
 });
 */
