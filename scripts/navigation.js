@@ -1,4 +1,6 @@
-$('section#about, section#experience, section#projects').hide();
+var messages= {};
+
+$('section#about, section#experience, section#projects, section#contact').hide();
 $('.nav').on('click', function(e) {
   e.preventDefault();
   $('section').not(this).hide();
@@ -6,9 +8,9 @@ $('.nav').on('click', function(e) {
   $('section#' + $whereToGo).show();
 });
 
-
 $('#menuIcon').on('click', function() {
   $('#navBar').toggle();
+  $('.headshot').toggle();
 });
 
 $(window).resize(function() {
@@ -19,35 +21,25 @@ $(window).resize(function() {
   };
 });
 
-/*
-$("#menuIcon").on('mouseenter', function() {
-  $('nav li').addClass("showNav");
-  $('nav li').removeClass("hideNav");
-
+$('#navBar').on('click', function() {
+  if (window.innerWidth < 640) {
+    $('#navBar').hide();
+  }
 });
 
-$("#menuIcon, nav").on('mouseleave', function() {
-  $('nav li').addClass("hideNav");
-  $('nav li').removeClass("showNav");
-
+$('#previewButton').on('click', function () {
+  $('#messagePreview').empty();
+  messages.contact = {
+    fullName: $('#userName').val(),
+    email: $('#userEmail').val(),
+    comment: $('#userComment').val()
+  };
+  $('#messagePreview').append('<br>' + messages.contact.fullName + '<br>' + messages.contact.email + '<br>' + messages.contact.comment);
+  var messageJSON = JSON.stringify(messages.contact);
+  console.log(messageJSON);
 });
-*/
 
-
-// if (window.innerWidth < 640) {
-//     $('nav li').hide();
-//     $('.navContainer').on('mouseenter', function () {
-//       $('nav li').show();
-//     });
-//     $('.navContainer').on('mouseleave', function () {
-//       $('nav li').hide();
-//     });
-//   };
-
-
-
-/*
-$('nav').hover(function() {
-  $('nav li').toggle();
-});
-*/
+ $('#submitButton').on('click', function () {
+   var ref = new Firebase("https://popping-heat-3312.firebaseio.com/");
+   ref.push(messages.contact);
+ });

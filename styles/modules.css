@@ -5,7 +5,20 @@
 
 .headshot {
   border-radius: 30%;
-  width: 20%;
+  width: 30%;
+  min-width: 30%;
   float: left;
-  clear: left;
+}
+
+#userComment {
+  width: 60%;
+  border-radius: 0.5em;
+  border-color: #000000;
+  padding: 0.5em;
+}
+
+input {
+  border-radius: 0.5em;
+  border-color: #000000;
+  padding: 0.5em;
 }

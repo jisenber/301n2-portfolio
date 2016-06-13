@@ -6,13 +6,14 @@
     <title>Jacob Isenberg's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    <link rel = "stylesheet" href="styles/octicons/octicons.css">
+    <link rel = "stylesheet" href="vendor/styles/octicons/octicons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/state.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   </head>
   <body>
     <h1 class = "headline"> Welcome to Jacob Isenberg's Portfolio </h1>
@@ -27,12 +28,13 @@
         <li class = "nav" data-index="projects"><a href= "a"><span class ="octicon octicon-paintcan"></span> projects</a></li>
         <li class = "link" data-index="facebook"><a href= "https://www.facebook.com/jacob.isenberg.7">Facebook</a></li>
         <li class = "link" data-index="github"><a href="https://github.com/jisenber">Github</a></li>
+        <li class = "nav" data-index="contact"><a href= "a"><span class ="octicon octicon-comment"></span> contact</a></li>
       </ul>
     </nav>
   </div>
-      <section id = "home">
-        <img src = "images/jacob_picture.png" class = "headshot">
-      </section>
+  <section id = "home">
+    <img src = "images/jacob_picture.png" class = "headshot">
+  </section>
     <section id = "about">
       <h2><p>Section Under construction</p></h2><br>
         <img src = "images/construction.png">
@@ -52,6 +54,23 @@
                 <br>
               </script>
               <div id = "jobList">
+          </div>
+        </section>
+        <section id  = "contact">
+          <form action="#" id="new-form">
+          <label>
+            <input type="text" id="userName" placeholder="Your Name" required><br><br>
+          </label>
+          <label>
+            <input type="text" id="userEmail" placeholder="Your Email" required><br><br>
+          </label>
+          <label>
+            <textarea id="userComment" rows="8" cols="40" placeholder="Your Message"required></textarea><br><br>
+          </label>
+          <button type="submit" form="new-form" value="Preview" id="previewButton">Preview</button><span>&nbsp;&nbsp;</span>
+          <button type="submit" form="new-form" value="Submit" id ="submitButton">Submit</button>
+          <div id = "messagePreview">
+
           </div>
         </section>
     </body>
