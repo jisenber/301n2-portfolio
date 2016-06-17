@@ -1,5 +1,5 @@
 
-a:link,a:visited {
+a:link:not(.website),a:visited:not(.website) {
     display: block;
     margin-right: 1em;
     font-weight:bold;
@@ -12,6 +12,6 @@ a:link,a:visited {
 }
 
 
-a:hover,a:active {
+a:hover:not(.website),a:active:not(.website) {
     background-color:#802000
 }

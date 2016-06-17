@@ -27,19 +27,41 @@ $('#navBar').on('click', function() {
   }
 });
 
-$('#previewButton').on('click', function () {
+function preview () {
   $('#messagePreview').empty();
-  messages.contact = {
+  messages.context = {
     fullName: $('#userName').val(),
     email: $('#userEmail').val(),
     comment: $('#userComment').val()
   };
-  $('#messagePreview').append('<br>' + messages.contact.fullName + '<br>' + messages.contact.email + '<br>' + messages.contact.comment);
+  var input = $('#previewScript').html();  //template script grabbed
+  var previewTemplate = Handlebars.compile(input); // template is compiled
+  previewContext = previewTemplate(messages.context);
+  $('#messagePreview').append(previewContext);
   var messageJSON = JSON.stringify(messages.contact);
-  console.log(messageJSON);
+};
+
+$('#previewButton').on('click', preview);
+
+//Below is the way to preview things without handlebars using fewer lines of code
+  // $('#messagePreview').empty();
+  // messages.contact = {
+  //   fullName: $('#userName').val(),
+  //   email: $('#userEmail').val(),
+  //   comment: $('#userComment').val()
+  // };
+  // $('#messagePreview').append('<br>' + messages.contact.fullName + '<br>' + messages.contact.email + '<br>' + messages.contact.comment);
+  // var messageJSON = JSON.stringify(messages.contact);
+//});
+
+$('#submitButton').on('click', function () {
+  var ref = new Firebase("https://popping-heat-3312.firebaseio.com/");
+  ref.push(messages.context);
 });
 
- $('#submitButton').on('click', function () {
-   var ref = new Firebase("https://popping-heat-3312.firebaseio.com/");
-   ref.push(messages.contact);
- });
+function sendToJSON(data) {
+  var $newData = JSON.stringify(data);
+  console.log($newData);
+} 
+  //This is what I did to send my data to a JSON file. Sent it to the console
+  //then got it in the console and copied and pasted it. ow resourceful!

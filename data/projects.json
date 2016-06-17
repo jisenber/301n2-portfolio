@@ -1,0 +1,10 @@
+[
+{
+  "Project":"World Capitals Game",
+  "Language":"Vanilla JavaScript",
+  "image": "images/capitals_main.png",
+  "Description": "This was a web app that I wrote in vanilla JavaScript after self-teaching
+  myself some basic JavaScript. I used this application to skip the beginner JavaScript
+  class offered by Code Fellows and place directly into their intermediate level course.",
+},
+]

@@ -14,6 +14,20 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script id="jobAddScript" type="text/x-handlebars-template">
+            <ul>
+              <li><b>Position:</b> {{position}} </li>
+              <li><b>Institution:</b> {{institution}}</li>
+              <li></b>Boss:</b> {{boss}} </li>
+              <li class = "website"><b>Website:</b> {{{website}}} </li>
+              <li><b>role:</b> {{role}} </li>
+              <br></ul>
+            </script>
+    <script id="previewScript" type="text/x-handlebars-template">
+      <br><p>{{fullName}}</p><br>
+      <p>{{email}}</p><br>
+      <p>{{comment}}</p>
+  </script>
   </head>
   <body>
     <h1 class = "headline"> Welcome to Jacob Isenberg's Portfolio </h1>
@@ -44,15 +58,6 @@
     </section>
     <section id = "experience">
       <h2>Work Experience</h2><br>
-      <script id="jobAddScript" type="text/x-handlebars-template">
-              <ul>
-                <li><b>Position:</b> <span class = "indent">{{position}}</span> </span></li>
-                <li><b>Institution:</b> <span class = "indent">{{institution}}</span></li>
-                <li></b>Boss:</b> <span class = "indent">{{boss}}</span></li>
-                <li><b>Website:</b> <span class = "indent">{{website}}</span> </li>
-                <li><b>role:</b> <span class = "indent">{{role}}</span> </li>
-                <br>
-              </script>
               <div id = "jobList">
           </div>
         </section>
@@ -69,14 +74,17 @@
           </label>
           <button type="submit" form="new-form" value="Preview" id="previewButton">Preview</button><span>&nbsp;&nbsp;</span>
           <button type="submit" form="new-form" value="Submit" id ="submitButton">Submit</button>
+        </form>
           <div id = "messagePreview">
 
           </div>
         </section>
     </body>
     <footer>
-      <script src="scripts/jobData.js"></script>
       <script src="scripts/jobAdd.js"></script>
       <script src="scripts/navigation.js"></script>
+      <script>
+        employment.extractAll()
+      </script>
     </footer>
 </html>
