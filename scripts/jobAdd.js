@@ -23,9 +23,9 @@ employment.loadAll = function(rawData) {
   });
 };
 
-employment.extractAll = function(rawData) {
-  if (localStorage.rawData) {
-    employment.loadAll(rawData);
+employment.extractAll = function(data) {
+  if (localStorage.jobs) {
+    employment.loadAll(JSON.parse(localStorage.jobs));
     jobConstructor.renderJobPage();
   } else {
     $.getJSON('data/jobData.json', function(data) {
