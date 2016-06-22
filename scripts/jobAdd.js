@@ -1,4 +1,4 @@
-(function() {
+(function(module) {
 jobConstructor = {};
 ProjectConstructor = {};
 
@@ -98,7 +98,7 @@ Projects.getData = function(callback) {
          e.preventDefault();
           Projects.getProjDetails().forEach(function(instance, i){
               if (Projects.getProjDetails()[i].title === e.target.textContent) {
-                console.log(Projects.getProjDetails()[i]);
+                console.log(e.target);
                 var projInput = $('#projDetails').html();
                 var compileProjInput = Handlebars.compile(projInput)
                 $('#projFooter').append(compileProjInput(Projects.getProjDetails()[i])) //Megan is a genius!!!!
@@ -108,6 +108,11 @@ Projects.getData = function(callback) {
   });
 }
 
+
 Employment.extractAll();
 Projects.getData(Projects.loadEm);
+
+module.Employment = Employment;
+module.Projects = Projects;
+
 })(window);
