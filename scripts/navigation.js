@@ -1,4 +1,5 @@
-var messages= {};
+(function() {
+  var messages= {};
 
 $('section#about, section#experience, section#projects, section#contact').hide();
 $('.nav').on('click', function(e) {
@@ -58,3 +59,4 @@ function sendToJSON(data) {
   var $newData = JSON.stringify(data);
   console.log($newData);
 };
+})(window)

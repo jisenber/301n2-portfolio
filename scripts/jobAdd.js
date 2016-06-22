@@ -1,3 +1,4 @@
+(function() {
 jobConstructor = {};
 ProjectConstructor = {};
 
@@ -88,7 +89,7 @@ Projects.getProjDetails = function() {
 
 //This isnt the most user-friendly way to display the details of my projects,
 //but I will clean it up soon and make it better. This was just to make sure that
-//I can make the functionality work... and it does! 
+//I can make the functionality work... and it does!
 Projects.getData = function(callback) {
   $.getJSON('data/projects.json', function (data) {
     callback(data);
@@ -109,3 +110,4 @@ Projects.getData = function(callback) {
 
 Employment.extractAll();
 Projects.getData(Projects.loadEm);
+})(window);
