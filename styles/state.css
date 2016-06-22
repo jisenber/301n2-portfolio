@@ -1,5 +1,5 @@
 
-a:link:not(.website),a:visited:not(.website) {
+.nav a:link, .link a:link, .nav a:visited, .link a:visited {
     display: block;
     margin-right: 1em;
     font-weight:bold;
@@ -12,6 +12,10 @@ a:link:not(.website),a:visited:not(.website) {
 }
 
 
-a:hover:not(.website),a:active:not(.website) {
+ .nav a:hover, .link a:active, .nav a:active, .link a: {
     background-color:#802000
+}
+
+#projectList span :hover {
+  background-color:#55AE3A;
 }

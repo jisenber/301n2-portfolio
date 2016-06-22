@@ -22,3 +22,11 @@ input {
   border-color: #000000;
   padding: 0.5em;
 }
+
+span.projText {
+  text-decoration: none;
+}
+
+.breakUp {
+  max-width: 30%;
+}
