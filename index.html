@@ -28,6 +28,13 @@
       <p>{{email}}</p><br>
       <p>{{comment}}</p>
   </script>
+  <script id="projDetails" type="text/x-handlebars-template">
+    <ul>
+      <li><br>Language: {{language}}</li>
+      <li>Description: {{description}}</li>
+      <li>Hours Worked: {{hours}}</li>
+    </ul>
+  </script>
   </head>
   <body>
     <h1 class = "headline"> Welcome to Jacob Isenberg's Portfolio </h1>
@@ -54,7 +61,10 @@
         <img src = "images/construction.png">
     </section>
     <section id = "projects">
-      <p><h4>This is also a work in progress</p></h4>
+      <div id ="projectList">
+      </div>
+      <div id = 'projFooter'>
+      </div>
     </section>
     <section id = "experience">
       <h2>Work Experience</h2><br>
@@ -83,8 +93,5 @@
     <footer>
       <script src="scripts/jobAdd.js"></script>
       <script src="scripts/navigation.js"></script>
-      <script>
-        employment.extractAll()
-      </script>
     </footer>
 </html>
