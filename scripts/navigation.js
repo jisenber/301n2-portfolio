@@ -1,13 +1,5 @@
-(function() {
+(function(module) {
   var messages= {};
-
-$('section#about, section#experience, section#projects, section#contact').hide();
-$('.nav').on('click', function(e) {
-  e.preventDefault();
-  $('section').not(this).hide();
-  var $whereToGo = $(this).data('index');
-  $('section#' + $whereToGo).show();
-});
 
 $('#menuIcon').on('click', function() {
   $('#navBar').toggle();
@@ -59,4 +51,9 @@ function sendToJSON(data) {
   var $newData = JSON.stringify(data);
   console.log($newData);
 };
+
+module.messages = messages
+Employment.extractAll();
+Projects.getData(Projects.loadEm);
+
 })(window)

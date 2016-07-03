@@ -86,7 +86,30 @@ Projects.getProjDetails = function() {
     };
   });
 };
+//
+Projects.hideProjDetails = function() {
+  $('.projInstance').on('click', function() {
+    if (($('.projInstance').children())) {
+      $(this).children().toggle()
+    } else {
+      Projects.showProjDetails()
+    }
+  })
+}
 
+Projects.showProjDetails = function() {
+  $('.projInstance').on('click', function(e) {
+    e.preventDefault();
+    Projects.getProjDetails().forEach(function(instance, i){
+      if (Projects.getProjDetails()[i].title === e.target.textContent) {
+        console.log(e.target);
+        var projInput = $('#projDetails').html();
+        var compileProjInput = Handlebars.compile(projInput)
+        $(event.target).append(compileProjInput(Projects.getProjDetails()[i]))//Megan is a genius!!!!
+      }
+    })
+  });
+}
 //This isnt the most user-friendly way to display the details of my projects,
 //but I will clean it up soon and make it better. This was just to make sure that
 //I can make the functionality work... and it does!
@@ -94,23 +117,8 @@ Projects.getData = function(callback) {
   $.getJSON('data/projects.json', function (data) {
     callback(data);
     $('#projFooter').append('<br>Jacob has worked ' + '<b>' + Projects.hoursWorked() + ' </b>hours on projects!')
-      $('.projInstance').on('click', function(e) {
-         e.preventDefault();
-          Projects.getProjDetails().forEach(function(instance, i){
-              if (Projects.getProjDetails()[i].title === e.target.textContent) {
-                console.log(e.target);
-                var projInput = $('#projDetails').html();
-                var compileProjInput = Handlebars.compile(projInput)
-                $('#projFooter').append(compileProjInput(Projects.getProjDetails()[i])) //Megan is a genius!!!!
-              }
-          })
-      });
-  });
+  }).done(Projects.hideProjDetails).done(Projects.showProjDetails)
 }
-
-
-Employment.extractAll();
-Projects.getData(Projects.loadEm);
 
 module.Employment = Employment;
 module.Projects = Projects;

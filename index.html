@@ -18,9 +18,9 @@
             <ul>
               <li><b>Position:</b> {{position}} </li>
               <li><b>Institution:</b> {{institution}}</li>
-              <li></b>Boss:</b> {{boss}} </li>
+              <li><b>Boss:</b> {{boss}} </li>
               <li class = "website"><b>Website:</b> {{{website}}} </li>
-              <li><b>role:</b> {{role}} </li>
+              <li><b>Role:</b> {{role}} </li>
               <br></ul>
             </script>
     <script id="previewScript" type="text/x-handlebars-template">
@@ -30,9 +30,9 @@
   </script>
   <script id="projDetails" type="text/x-handlebars-template">
     <ul>
-      <li><br>Language: {{language}}</li>
-      <li>Description: {{description}}</li>
-      <li>Hours Worked: {{hours}}</li>
+      <li><br><h4>Language: {{language}}</h4></li>
+      <li><h4>Description: {{description}}</h4></li>
+      <li><h4>Hours Worked: {{hours}}</h4></li>
     </ul>
   </script>
   </head>
@@ -43,13 +43,13 @@
     <nav>
       <span class = "octicon octicon-list-unordered" id = "menuIcon"></span>
       <ul id = "navBar">
-        <li class = "nav" data-index="home"><a href= "a"><span class ="octicon octicon-home"></span> home</a></li>
-        <li class = "nav" data-index="about"><a href= "a"><span class = "octicon octicon-mortar-board"></span> about</a></li>
-        <li class = "nav" data-index="experience"><a href= "a"><span class ="octicon octicon-watch"></span> experience</a></li>
-        <li class = "nav" data-index="projects"><a href= "a"><span class ="octicon octicon-paintcan"></span> projects</a></li>
+        <li class = "nav" data-index="home"><a href= "/"><span class ="octicon octicon-home"></span> home</a></li>
+        <li class = "nav" data-index="about"><a href= "/about"><span class = "octicon octicon-mortar-board"></span> about</a></li>
+        <li class = "nav" data-index="experience"><a href= "/experience"><span class ="octicon octicon-watch"></span> experience</a></li>
+        <li class = "nav" data-index="projects"><a href= "/projects"><span class ="octicon octicon-paintcan"></span> projects</a></li>
         <li class = "link" data-index="facebook"><a href= "https://www.facebook.com/jacob.isenberg.7">Facebook</a></li>
         <li class = "link" data-index="github"><a href="https://github.com/jisenber">Github</a></li>
-        <li class = "nav" data-index="contact"><a href= "a"><span class ="octicon octicon-comment"></span> contact</a></li>
+        <li class = "nav" data-index="contact"><a href= "/contact"><span class ="octicon octicon-comment"></span> contact</a></li>
       </ul>
     </nav>
   </div>
@@ -91,7 +91,10 @@
         </section>
     </body>
     <footer>
-      <script src="scripts/jobAdd.js"></script>
-      <script src="scripts/navigation.js"></script>
+      <script src="/vendor/scripts/page.js"></script>
+      <script src="/scripts/jobAdd.js"></script>
+      <script src="/scripts/navigation.js"></script>
+      <script src="/scripts/navController.js"></script>
+      <script src="/scripts/routes.js"></script>
     </footer>
 </html>
