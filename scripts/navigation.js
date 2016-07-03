@@ -1,5 +1,31 @@
 (function() {
   var messages= {};
+//   var nav = {}
+//
+// aboutController.nav = function() {
+//     $('#home, #experience, #projects, #contact').hide();
+//     $('#about').show();
+//   };
+//
+//  projectsController.nav = function() {
+//    $('#home, #experience, #about, #contact').hide();
+//    $('#projects').show();
+//  };
+//
+//  experienceController.nav = function() {
+//    $('#home, #projects, #about, #contact').hide();
+//    $('#experience').show();
+//  };
+//
+//  homeController.nav = function() {
+//   $('#experience, #projects, #about, #contact').hide();
+//   $('#home').show();
+//  };
+//
+// contactController.nav = function() {
+//   $('#home, #projects, #about, #experience').hide();
+//   $('#contact').show();
+//  }
 
 $('section#about, section#experience, section#projects, section#contact').hide();
 $('.nav').on('click', function(e) {
@@ -59,4 +85,6 @@ function sendToJSON(data) {
   var $newData = JSON.stringify(data);
   console.log($newData);
 };
+
+module.nav = nav
 })(window)

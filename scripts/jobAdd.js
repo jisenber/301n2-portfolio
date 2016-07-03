@@ -101,7 +101,7 @@ Projects.getData = function(callback) {
                 console.log(e.target);
                 var projInput = $('#projDetails').html();
                 var compileProjInput = Handlebars.compile(projInput)
-                $('#projFooter').append(compileProjInput(Projects.getProjDetails()[i])) //Megan is a genius!!!!
+                $(event.target).append(compileProjInput(Projects.getProjDetails()[i])) //Megan is a genius!!!!
               }
           })
       });
