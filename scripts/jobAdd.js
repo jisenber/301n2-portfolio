@@ -118,7 +118,7 @@ Projects.getData = function(callback) {
     callback(data);
     $('#projFooter').append('<br>Jacob has worked ' + '<b>' + Projects.hoursWorked() + ' </b>hours on projects!')
   }).done(Projects.hideProjDetails).done(Projects.showProjDetails)
-}
+};
 
 module.Employment = Employment;
 module.Projects = Projects;
