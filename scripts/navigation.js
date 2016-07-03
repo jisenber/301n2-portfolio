@@ -1,39 +1,5 @@
-(function() {
+(function(module) {
   var messages= {};
-//   var nav = {}
-//
-// aboutController.nav = function() {
-//     $('#home, #experience, #projects, #contact').hide();
-//     $('#about').show();
-//   };
-//
-//  projectsController.nav = function() {
-//    $('#home, #experience, #about, #contact').hide();
-//    $('#projects').show();
-//  };
-//
-//  experienceController.nav = function() {
-//    $('#home, #projects, #about, #contact').hide();
-//    $('#experience').show();
-//  };
-//
-//  homeController.nav = function() {
-//   $('#experience, #projects, #about, #contact').hide();
-//   $('#home').show();
-//  };
-//
-// contactController.nav = function() {
-//   $('#home, #projects, #about, #experience').hide();
-//   $('#contact').show();
-//  }
-
-$('section#about, section#experience, section#projects, section#contact').hide();
-$('.nav').on('click', function(e) {
-  e.preventDefault();
-  $('section').not(this).hide();
-  var $whereToGo = $(this).data('index');
-  $('section#' + $whereToGo).show();
-});
 
 $('#menuIcon').on('click', function() {
   $('#navBar').toggle();
@@ -86,5 +52,8 @@ function sendToJSON(data) {
   console.log($newData);
 };
 
-module.nav = nav
+module.messages = messages
+Employment.extractAll();
+Projects.getData(Projects.loadEm);
+
 })(window)
