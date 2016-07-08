@@ -1,4 +1,4 @@
-(function(module) {
+(function() {
   function placeDataonScreen(data) {
     data.forEach(function(ele) {
       repoInfo.all.push(ele);
@@ -10,6 +10,6 @@
     });
   };
 
-  repoInfo.getRepos(placeDataonScreen)
+  repoInfo.getRepos(placeDataonScreen);
 
-})(window)
+})(window);
