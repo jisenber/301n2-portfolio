@@ -7,7 +7,8 @@
     var truncatedRepos = repoInfo.all.map(function(ele) {
       return {
         name: ele.name,
-        url: ele.html_url
+        url: ele.html_url,
+        fork: ele.fork
       };
     });
     return truncatedRepos;
@@ -15,8 +16,8 @@
 
   repoInfo.getRepos = function(callback) {
     return $.ajax({
-      url: 'https://api.github.com/users/jisenber/repos?per_page=10&sort=updated',
-      tyle: 'GET',
+      url: 'https://api.github.com/user/repos',
+      type: 'GET',
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data) {
         callback(data);

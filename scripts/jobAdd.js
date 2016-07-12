@@ -48,6 +48,12 @@
     };
   };
 
+  Employment.showAnimation = function(ctx, next) {
+    $('#experienceFooter').empty();
+    var compliment = 'Wow! Jacob is so Impressive!';
+    $('#experienceFooter').append('<h2>' + compliment + '</h2>').fadeIn('slow').fadeOut('slow');
+  };
+
   jobConstructor.renderJobPage = function() {
     Employment.all.forEach(function(a){
       $('#jobList').append(a.toHtml() + '<hr class = "breakUp" align="left"</hr>');
