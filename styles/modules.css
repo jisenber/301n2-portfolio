@@ -30,3 +30,7 @@ span.projText {
 .breakUp {
   max-width: 30%;
 }
+
+#experienceFooter {
+  display: none;
+}

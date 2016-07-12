@@ -6,7 +6,9 @@
     var truncatedRepos = repoInfo.populateRepos();
     console.log(truncatedRepos);
     truncatedRepos.forEach(function(ele) {
-      $('#repoList').append(ele.name + '<br>' + '<br>');
+      if (ele.fork === false) {
+        $('#repoList').append(ele.name + '<br>' + '<br>');
+      };
     });
   };
 

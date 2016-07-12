@@ -7,7 +7,8 @@
     var truncatedRepos = repoInfo.all.map(function(ele) {
       return {
         name: ele.name,
-        url: ele.html_url
+        url: ele.html_url,
+        fork: ele.fork
       };
     });
     return truncatedRepos;
