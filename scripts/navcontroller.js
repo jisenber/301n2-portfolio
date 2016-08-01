@@ -16,10 +16,9 @@
     $('#projects').show();
   };
 
-  nav.experienceController = function(ctx, next) {
+  nav.experienceController = function() {
     $('#home, #projects, #about, #contact').hide();
     $('#experience').show();
-    next();
   };
 
   nav.contactController = function() {

@@ -48,12 +48,6 @@
     };
   };
 
-  Employment.showAnimation = function(ctx, next) {
-    $('#experienceFooter').empty();
-    var compliment = 'Wow! Jacob is so Impressive!';
-    $('#experienceFooter').append('<h2>' + compliment + '</h2>').fadeIn('slow').fadeOut('slow');
-  };
-
   jobConstructor.renderJobPage = function() {
     Employment.all.forEach(function(a){
       $('#jobList').append(a.toHtml() + '<hr class = "breakUp" align="left"</hr>');
@@ -108,7 +102,6 @@
       e.preventDefault();
       Projects.getProjDetails().forEach(function(instance, i){
         if (Projects.getProjDetails()[i].title === e.target.textContent) {
-          console.log(e.target);
           var projInput = $('#projDetails').html();
           var compileProjInput = Handlebars.compile(projInput);
           $(event.target).append(compileProjInput(Projects.getProjDetails()[i]));//Megan is a genius!!!!

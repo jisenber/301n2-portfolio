@@ -25,19 +25,5 @@
   "image": "images.portfolio.png",
   "hours": 50,
   "description": "You're looking at it!"
-},
-
-{"projectName": "Fill space",
-  "language": "Gibbrish",
-  "image": "images/fatsuit.png",
-  "hours": 1,
-  "description": "wgajfksgdgkdfgaglkhgjkhd;slkdflwgaj fksgdgkdfgaglkhgjkhd;slkdfl wgajfksgdgkdfgaglkhgjkhd;slkdflwgajfksgdgk dfgaglkhgjkhd;slkdfl wgajfksgdgkdfgaglkhgjkhd;slkdflwgajfksg dgkdfgaglkhgjkhd;slkdflwgajfksgdgkdfgaglkhgjkh d;slkdfl wgajfksgdgkdfgaglkhgjkhd;slkdflwgajfks gdgkdfgaglkhgjkhd;slkdflwgajfksgdgkdfg aglkhgjkhd;slkdfl wgajfksgdgkdfgaglkhgj khd;slkdflwgajfksgdgkdfgaglkhgjkhd;sl kdflwgajfksgdgkdfgaglkhg jkhd;slkdfl wgajfksgdgkdfgaglkhgj khd;slkdflwgajfksgdgkdfg aglkhgjkhd;slkdflwgajfksgdgkdfgaglkhg jkhd;slkdfl wgajfksgdgkdfgaglkhgjkhd;slkdflwg ajfksgdgkdfgaglkhgjkhd;slkdflwg ajfksgdgkdfgaglkhgjkhd; slkdfl wgajfksgdgkdfgaglkhgjkhd;slk dflwgajfksgdgkdfgaglkhgj khd;slkdflwgajfksgdg kdfgaglkhgjkhd;slkdfl wgajfksgdgkdfgaglk hgjkhd;slkdflwgajfksgdgkdf gaglkhgjkhd;slkdflwgajf ksgdgkdfgaglkh gjkhd;slkdfl"
-},
-
-{"projectName": "Another project",
-  "language": "Some language",
-  "image": "images/construction.png",
-  "hours": 90,
-  "description": "Top Secret"
 }
 ]
